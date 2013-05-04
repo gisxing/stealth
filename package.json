@@ -1,0 +1,8 @@
+{
+    "name": "stealth",
+    "description": "Go through the firewall by stealth.",
+    "version": "0.0.1",
+    "author": "Zhen Zhijian",
+    "dependencies": {
+    }
+}
