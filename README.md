@@ -33,3 +33,7 @@ You don't wanna see log? Client also can be run like:
 node client.js 2>error.log >/dev/null &
 ```
 Vice versa.
+
+Thanks!
+-------
+Thanks to Gert Van Gool! I got much from your node-socks https://github.com/gvangool/node-socks.
