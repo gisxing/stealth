@@ -1,5 +1,5 @@
 var net = require('net'),
-    socks5 = require('./lib/socks5.js');
+    socks5 = require('../lib/socks5.js');
 
 var HOST = 'localhost',
     PORT = '1080';
