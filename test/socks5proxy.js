@@ -12,6 +12,15 @@ var proxyServer = socks5.createSocks5Server(function(clnSocket, rPort, rHost){
         socks5.proxyReady(clnSocket);
     });
 
+    remote.on('close', function(err){
+        clnSocket.end();
+        console.log('Remote closed.');
+    });
+    clnSocket.on('close', function(err){
+        remote.end();
+        console.log('Client closed.');
+    });
+
 });
 
 function relay(cSocket, rSocket){
@@ -21,14 +30,6 @@ function relay(cSocket, rSocket){
     });
     cSocket.on('data', function(chunk){
         rSocket.write(chunk);
-    });
-    rSocket.on('close', function(err){
-        cSocket.end();
-        console.log('Remote closed.');
-    });
-    cSocket.on('close', function(err){
-        rSocket.end();
-        console.log('Client closed.');
     });
 }
 
