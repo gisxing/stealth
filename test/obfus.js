@@ -4,8 +4,8 @@ var key = 'abcdefg';
 var ob = new obfus.Obfuscator(key);
 
 var text = new Buffer('Hello world.');
-var obfText = ob.proc(text);
-var unobfText = ob.proc(obfText);
+var obfText = ob.obfuscate(text);
+var unobfText = ob.explicit(obfText);
 
 console.log(text.toString());
 console.log(obfText);
