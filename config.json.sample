@@ -1,0 +1,7 @@
+{
+    "clientHost": "localhost",
+    "clientPort": 1080,
+    "serverHost": "localhost",
+    "serverPort": 1081,
+    "key": "Cast Stealth! I am invisible now."
+}
